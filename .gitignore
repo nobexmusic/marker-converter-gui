@@ -1,0 +1,10 @@
+# Build artifacts
+*.dmg
+*.app/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS system files
+.DS_Store
