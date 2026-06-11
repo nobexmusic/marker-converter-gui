@@ -36,7 +36,9 @@ PDF, Word (DOCX), PowerPoint (PPTX), Excel (XLSX), EPUB и HTML в чистый 
 
 ## Установка
 
-1. Смонтируйте `MarkerConverter.dmg` и перетащите приложение в `Applications`.
+1. Скачайте `MarkerConverter.dmg` из
+   [последнего релиза](https://github.com/nobexmusic/marker-converter-gui/releases/latest),
+   смонтируйте его и перетащите приложение в `Applications`.
 2. Первый запуск: правый клик → «Открыть» (приложение не подписано).
 3. Подождите 5–15 минут — установщик сам скачает Python, пакеты и ML-модели (~5 ГБ).
    Прогресс пишется в `~/Library/Logs/MarkerConverter-setup.log`.

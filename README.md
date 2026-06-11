@@ -37,7 +37,9 @@ pick a folder, press Convert.
 
 ## Installation
 
-1. Mount `MarkerConverter.dmg` and drag the app into `Applications`.
+1. Download `MarkerConverter.dmg` from the
+   [latest release](https://github.com/nobexmusic/marker-converter-gui/releases/latest),
+   mount it and drag the app into `Applications`.
 2. First launch: right-click → "Open" (the app is unsigned).
 3. Wait 5–15 minutes — the installer automatically downloads Python, packages and
    the ML models (~5 GB). Progress is logged to `~/Library/Logs/MarkerConverter-setup.log`.
