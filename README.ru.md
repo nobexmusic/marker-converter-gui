@@ -9,6 +9,8 @@ PDF, Word (DOCX), PowerPoint (PPTX), Excel (XLSX), EPUB и HTML в чистый 
 [marker-pdf](https://github.com/datalab-to/marker): выбрали файл, выбрали папку,
 нажали Convert.
 
+![Marker Converter — окно macOS-приложения: выбор файла, папки, переключатель форматов Markdown/JSON/HTML, кнопка Convert и лог](assets/screenshot.png)
+
 ## Возможности
 
 - **Конвертирует PDF в Markdown** — включая сканы, благодаря встроенному OCR

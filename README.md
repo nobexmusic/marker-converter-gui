@@ -9,6 +9,8 @@ subscription. It is a native graphical interface (GUI) for the
 [marker-pdf](https://github.com/datalab-to/marker) conversion engine: pick a file,
 pick a folder, press Convert.
 
+![Marker Converter — macOS app window: file picker, output folder, Markdown/JSON/HTML format switch, Convert button and log](assets/screenshot.png)
+
 ## Key features
 
 - **Converts PDF to Markdown** — including scanned PDFs, thanks to built-in OCR
