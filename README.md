@@ -1,30 +1,74 @@
-# Marker Converter
+# Marker Converter — PDF to Markdown converter for macOS
 
 **English** | [Русский](README.ru.md)
 
-A native macOS app for converting documents (PDF, DOCX, PPTX and more) to
-Markdown / JSON / HTML. A GUI for [marker-pdf](https://github.com/datalab-to/marker):
-pick a file, a folder and a format — get clean Markdown with extracted images.
+Marker Converter is a free, open-source macOS app that converts PDF, Word (DOCX),
+PowerPoint (PPTX), Excel (XLSX), EPUB and HTML documents into clean **Markdown**,
+**JSON** or **HTML** — entirely on your Mac, with built-in OCR, no cloud and no
+subscription. It is a native graphical interface (GUI) for the
+[marker-pdf](https://github.com/datalab-to/marker) conversion engine: pick a file,
+pick a folder, press Convert.
 
-Light macOS-style interface: fixed 680px window, format segmented control,
-animated progress, a result card with an "Open ↗" button, a collapsible log
-and a `#` menu bar icon.
+## Key features
+
+- **Converts PDF to Markdown** — including scanned PDFs, thanks to built-in OCR
+  (the [surya](https://github.com/datalab-to/surya) models used by marker)
+- **Also converts DOCX, PPTX, XLSX, EPUB and HTML** to Markdown, JSON or HTML
+- **Extracts images and tables** from documents and saves them next to the output
+- **100% local and offline** after the one-time setup — documents never leave your Mac,
+  so it is safe for private and confidential files
+- **No terminal, no Python knowledge required** — a regular Mac app with a single window
+- **Free and open source** (MIT-licensed GUI code)
+
+## Common use cases
+
+- Preparing documents for **LLMs, RAG pipelines and AI assistants** — Markdown is the
+  preferred input format for ChatGPT, Claude and other models
+- Importing PDFs and Word documents into **Obsidian, Notion or other Markdown
+  note-taking apps**
+- Turning scanned books and papers into searchable, editable text (OCR)
+- Bulk archiving of office documents in a plain-text, future-proof format
 
 ## Requirements
 
-- Mac with Apple Silicon (M1 or later)
-- macOS 12.0+
-- ~10 GB of free space and an internet connection for the first launch
+- Mac with **Apple Silicon** (M1, M2, M3, M4 or later) — Intel Macs are not supported
+- macOS 12.0 or newer
+- ~10 GB of free disk space and an internet connection for the first launch
 
 ## Installation
 
 1. Mount `MarkerConverter.dmg` and drag the app into `Applications`.
 2. First launch: right-click → "Open" (the app is unsigned).
-3. Wait 5–15 minutes — the installer downloads Python, packages and ML models (~5 GB)
-   on its own. Progress is logged to `~/Library/Logs/MarkerConverter-setup.log`.
+3. Wait 5–15 minutes — the installer automatically downloads Python, packages and
+   the ML models (~5 GB). Progress is logged to `~/Library/Logs/MarkerConverter-setup.log`.
 
-After that the app starts instantly. Each macOS user gets their own installation
-(`~/Library/Application Support/MarkerConverter`).
+After that the app starts instantly and works fully offline. Each macOS user gets
+their own installation (`~/Library/Application Support/MarkerConverter`).
+
+## FAQ
+
+**Is Marker Converter free?**
+Yes. The app is free and open source (MIT). It wraps the open-source marker-pdf
+engine; see [License](#license) for the engine's own terms.
+
+**Does it work offline? Is my data uploaded anywhere?**
+After the one-time model download, conversion runs entirely on your Mac. No file,
+page or text is ever sent to a server.
+
+**Can it convert scanned PDFs?**
+Yes. OCR is built in: marker detects page layout, recognizes text (including
+scanned pages), tables and equations, and produces structured Markdown.
+
+**Why does it need ~10 GB and a long first launch?**
+The first launch downloads a private Python runtime and ~3.3 GB of machine-learning
+models for layout detection and OCR. This happens once.
+
+**Does it run on Intel Macs?**
+No, Apple Silicon (M1 or later) only.
+
+**Where is my converted file?**
+In the output folder you chose: `<folder>/<name>/<name>.md` (or `.json` / `.html`),
+with extracted images next to it. The "Open ↗" button reveals it in Finder.
 
 ## Building the DMG
 
@@ -34,8 +78,7 @@ After that the app starts instantly. Each macOS user gets their own installation
 ```
 
 The script builds the .app in a temp folder, downloads a pinned uv version
-(with a sha256 check), styles the DMG window (background, icon positions,
-volume icon) and sets the app icon on the .dmg file itself.
+(with a sha256 check), styles the DMG window and sets the app icon on the .dmg file.
 
 ## Running from sources (for development)
 
